@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Container className="text-primary">
+      <Container>
         <Routes>
           <Route path="/" element={<Chat />} />
           <Route path="/register" element={<Register />} />
