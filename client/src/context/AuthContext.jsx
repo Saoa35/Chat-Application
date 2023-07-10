@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useCallback, useState } from "react";
 
 export const AuthContext = createContext();
 
@@ -9,8 +9,13 @@ export const AuthContextProvider = ({ children }) => {
     email: "",
     password: "",
   });
+
+  const updateRegisterInfo = useCallback((info) => {
+    setRegisterInfo(info);
+  }, []);
+
   return (
-    <AuthContext.Provider value={{ user, registerInfo }}>
+    <AuthContext.Provider value={{ user, registerInfo, updateRegisterInfo }}>
       {children}
     </AuthContext.Provider>
   );
