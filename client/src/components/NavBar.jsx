@@ -7,7 +7,7 @@ export const NavBar = () => {
       <Container>
         <h2>
           <Link to="/" className="link-info text-decoration-none">
-            Chaters
+            Chatersss
           </Link>
         </h2>
         <span className="text-warning">Welcome Alex</span>
