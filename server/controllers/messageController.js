@@ -1,6 +1,6 @@
 const messageModel = require("../models/messageModel.js");
 
-const createMessage = async () => {
+const createMessage = async (req, res) => {
   const { chatId, senderId, text } = req.body;
 
   const message = new messageModel({
@@ -11,10 +11,10 @@ const createMessage = async () => {
 
   try {
     const responce = await message.save();
-    responce.status(200).json(responce);
+    res.status(200).json(responce);
   } catch (error) {
     console.log(error);
-    resizeBy.status(500).json(error);
+    res.status(500).json(error);
   }
 };
 
@@ -26,7 +26,7 @@ const getMessages = async (req, res) => {
     res.status(200).json(messages);
   } catch (error) {
     console.log(error);
-    resizeBy.status(500).json(error);
+    res.status(500).json(error);
   }
 };
 
