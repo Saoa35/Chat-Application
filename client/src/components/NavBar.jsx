@@ -7,14 +7,14 @@ export const NavBar = () => {
   const { user, logoutUser } = useContext(AuthContext);
 
   return (
-    <Navbar bg="success" className="mb-4" style={{ height: "3.75rem" }}>
+    <Navbar bg="dark" className="mb-4" style={{ height: "3.75rem" }}>
       <Container>
         <h2>
-          <Link to="/" className="link-info text-decoration-none">
+          <Link to="/" className="link-light text-decoration-none">
             Chatersss
           </Link>
         </h2>
-        {user && <span className="text-warning">Welcome {user.name}</span>}
+        {user && <span className="text-light">Welcome, {user.name} 🙃</span>}
         <Nav>
           <Stack direction="horizontal" gap={3}>
             {user && (

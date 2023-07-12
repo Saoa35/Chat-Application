@@ -2,9 +2,9 @@
 
 body {
   /* color: rgb(5, 162, 0); */
-  color: rgb(104, 106, 113);
+  color: rgb(22, 47, 121);
   font-family: "Nunito", sans-serif;
-  background: rgb(178, 198, 205);
+  background: rgb(208, 216, 219);
 }
 
 /* All users */
@@ -14,7 +14,7 @@ body {
 }
 
 .single-user {
-  background: rgb(0, 213, 255);
+  background: rgb(20, 98, 113);
   color: white;
   cursor: pointer;
   padding: 5px 7px;
@@ -25,9 +25,9 @@ body {
 
 /* User Card */
 .user-card {
-  color: white;
+  color: rgb(11, 44, 175);
   position: relative;
-  border-bottom: 1px solid rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(25, 110, 213);
   width: 380px;
 }
 
@@ -42,7 +42,7 @@ body {
 .user-card .text,
 .user-card .date {
   font-size: 14px;
-  color: rgb(180, 180, 180);
+  color: rgb(22, 47, 121);
 }
 
 .user-online {
@@ -50,7 +50,7 @@ body {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background: rgb(0, 219, 0);
+  background: rgb(8, 199, 8);
   position: absolute;
   top: -3px;
   right: -3px;
@@ -201,7 +201,8 @@ body {
 
 .this-user-notifications {
   display: flex;
-  background: #00bd9b;
+  background: rgb(102, 102, 249);
+  color: white;
   height: 20px;
   width: 20px;
   font-size: 12px;
