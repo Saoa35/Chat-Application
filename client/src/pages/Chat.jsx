@@ -19,7 +19,7 @@ export const Chat = () => {
             {isUserChatsLoading && <p>Loading...</p>}
             {userChats?.map((chat, inx) => {
               return (
-                <div key={inx}>
+                <div key={inx} onClick={() => updateCurrentChat(chat)}>
                   <UserChat chat={chat} user={user} />
                 </div>
               );
