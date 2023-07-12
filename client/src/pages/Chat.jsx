@@ -7,7 +7,7 @@ import { PotentialChats } from "../components/chat/PotentialChats";
 
 export const Chat = () => {
   const { user } = useContext(AuthContext);
-  const { userChats, isUserChatsLoading, userChatsError } =
+  const { userChats, isUserChatsLoading, updateCurrentChat } =
     useContext(ChatContext);
 
   return (
