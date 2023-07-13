@@ -3,6 +3,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
 import { useFetchRecipientUser } from "../../hooks/useFetchRecipient";
 import { Stack } from "react-bootstrap";
+import moment from "moment";
 
 export const ChatBox = () => {
   const { user } = useContext(AuthContext);
@@ -26,6 +27,17 @@ export const ChatBox = () => {
       <div className="chat-header">
         <strong>{recipientUser?.name}</strong>
       </div>
+      <Stack gap={3} className="messages">
+        {messages &&
+          messages.map((message, ind) => (
+            <Stack key={ind}>
+              <span>{message.text}</span>
+              <span className="message-footer">
+                {moment(message.createdAt).calendar()}
+              </span>
+            </Stack>
+          ))}
+      </Stack>
     </Stack>
   );
 };
